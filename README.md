@@ -1,3 +1,19 @@
+# 🍵 Matcha KOL Scorer
+
+> **本仓库 Fork 自 [NanmiCoder/MediaCrawler](https://github.com/NanmiCoder/MediaCrawler)** — non-commercial learning license
+>
+> 在 upstream 之上新增了「抖音/小红书达人批量评分」能力（面向泛日式甜品/抹茶方向）：
+>
+> - **入口**：`matcha` 命令（`matcha init | login | resolve | scan | score | report`）
+> - **新代码**：`matcha/` 目录（不动 upstream 文件）
+> - **文档**：[`MATCHA_README.md`](MATCHA_README.md) · [`docs/00-mvp-plan.md`](docs/00-mvp-plan.md)
+>
+> ⚠️ 与 upstream 一致，**仅供学习和研究用途，禁止商业用途**。
+>
+> 下面是 MediaCrawler upstream 的原 README，保留完整以尊重原作者。
+
+---
+
 # 🔥 MediaCrawler - 自媒体平台爬虫 🕷️
 
 <div align="center">

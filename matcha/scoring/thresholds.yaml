@@ -1,0 +1,46 @@
+# 评分阈值配置 v1.0
+# 修改后请同步 THRESHOLDS_VERSION 并重跑打分.
+
+version: "v1.0"
+
+influence:
+  weight: 40
+  bins:
+    - { min_follower: 50000, score: 40, label: "头部" }
+    - { min_follower: 10000, score: 30, label: "腰部" }
+    - { min_follower: 3000,  score: 20, label: "小达人" }
+    - { min_follower: 0,     score: 10, label: "萌新" }
+
+engagement:
+  weight: 30
+  bins:
+    - { min_rate_pct: 8.0, score: 30, label: "顶级互动" }
+    - { min_rate_pct: 4.0, score: 22, label: "高互动" }
+    - { min_rate_pct: 2.0, score: 15, label: "中互动" }
+    - { min_rate_pct: 1.0, score: 8,  label: "普通互动" }
+    - { min_rate_pct: 0.0, score: 3,  label: "低互动" }
+
+stability:
+  weight: 15
+  min_notes_required: 5
+  fallback_score: 8
+  bins:
+    - { min_ratio: 0.40, score: 15, label: "非常稳定" }
+    - { min_ratio: 0.20, score: 10, label: "较稳定" }
+    - { min_ratio: 0.10, score: 5,  label: "波动大" }
+    - { min_ratio: 0.0,  score: 2,  label: "极不稳定" }
+
+relevance:
+  weight: 15
+  bins:
+    - { min_hit_ratio: 0.70, score: 15, label: "专精抹茶" }
+    - { min_hit_ratio: 0.40, score: 10, label: "泛日式甜品" }
+    - { min_hit_ratio: 0.15, score: 6,  label: "偶尔提及" }
+    - { min_hit_ratio: 0.0,  score: 2,  label: "基本不做" }
+
+grades:
+  - { min_score: 85, grade: "S", label: "强烈推荐" }
+  - { min_score: 70, grade: "A", label: "推荐" }
+  - { min_score: 55, grade: "B", label: "备选" }
+  - { min_score: 40, grade: "C", label: "谨慎" }
+  - { min_score: 0,  grade: "D", label: "不推荐" }
